@@ -1,0 +1,40 @@
+{
+  "_note": "Medical rules are configurable and must be reviewed against official guidance before any real use. Not medical advice.",
+  "compatibility": {
+    "O-": ["O-"],
+    "O+": ["O+", "O-"],
+    "A-": ["A-", "O-"],
+    "A+": ["A+", "A-", "O+", "O-"],
+    "B-": ["B-", "O-"],
+    "B+": ["B+", "B-", "O+", "O-"],
+    "AB-": ["AB-", "A-", "B-", "O-"],
+    "AB+": ["AB+", "AB-", "A+", "A-", "B+", "B-", "O+", "O-"]
+  },
+  "cooldown_days": 120,
+  "max_contacts_per_week": 3,
+  "ranking_weights": {
+    "proximity": 0.40,
+    "response_rate": 0.25,
+    "readiness": 0.20,
+    "exact_match": 0.15
+  },
+  "default_response_rate": 0.5,
+  "waves": [
+    {"wave": 1, "size": 5,    "radius_km": 5,  "timeout_min": {"normal": 10, "critical": 5}},
+    {"wave": 2, "size": 15,   "radius_km": 10, "timeout_min": {"normal": 10, "critical": 5}},
+    {"wave": 3, "size": null, "radius_km": 25, "timeout_min": {"normal": 15, "critical": 8}}
+  ],
+  "trust": {
+    "base": 50,
+    "phone_verified": 15,
+    "known_hospital": 15,
+    "complete": 10,
+    "fulfilled_history": 10,
+    "duplicate": -40,
+    "too_many_requests": -25,
+    "too_many_threshold": 3,
+    "too_many_window_hours": 24,
+    "publish_at": 60,
+    "hold_at": 30
+  }
+}
