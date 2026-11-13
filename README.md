@@ -120,10 +120,3 @@ What is covered:
 | `GET /admin/requests?status=HELD`, `POST /admin/requests/{id}/decision`, `GET /admin/requests/{id}/events`, `GET /admin/stats` | Admin review, audit log, analytics |
 | `POST /dev/requests/{id}/skip-wave`, `/simulate` | Demo helpers (development only) |
 
-## Team
-
-| Member | Area |
-|---|---|
-| [Member A] | Frontend and UX |
-| [Member B] | Backend and DevOps |
-| [Member C] | AI agents |
